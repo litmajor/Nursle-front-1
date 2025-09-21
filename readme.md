@@ -21,7 +21,7 @@ src/
 ```
 
 ## Configuration
-- **Vite Config**: Configured for Replit environment with `allowedHosts: true` and proper port binding
+- **Vite Config**: Configured for local/production environment with `allowedHosts: true` and proper port binding
 - **Development Server**: Runs on `0.0.0.0:5000` for Replit proxy compatibility
 - **HMR**: Configured for HTTPS proxy environment (clientPort: 443)
 
@@ -37,11 +37,10 @@ src/
 - Run `npm run preview` to preview production build
 
 ## Recent Changes
-- **2025-09-21**: Initial import and setup for Replit environment
+- **2025-09-21**: Initial import and setup within development environment
 - Configured Vite for proxy compatibility with `allowedHosts: true`
 - Set up proper host binding and port configuration
 - Configured deployment settings for production
-- Resolved host blocking issues for Replit proxy access
 
 ## User Preferences
 - No specific coding style preferences noted yet
@@ -50,4 +49,5 @@ src/
 ## Notes
 - This is a frontend-only application with no backend dependencies
 - Uses mock data for triage recommendations (placeholder for future AI integration)
-- Deployment configured for Replit's autoscale environment
+
+Written by James Kagua(litmajor)
