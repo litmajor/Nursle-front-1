@@ -4,14 +4,17 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 import PatientForm from './pages/PatientForm'
 import TriageResult from './pages/TriageResult'
+import { ThemeProvider } from './contexts/ThemeContext'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<PatientForm />} />
-        <Route path="/triage" element={<TriageResult />} />
-      </Routes>
-    </BrowserRouter>
+    <ThemeProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<PatientForm />} />
+          <Route path="/triage" element={<TriageResult />} />
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   </React.StrictMode>,
 )
