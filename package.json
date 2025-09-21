@@ -7,10 +7,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "framer-motion": "^10.16.4",
+    "openai": "^5.22.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.20.1",
-    "framer-motion": "^10.16.4"
+    "react-router-dom": "^6.20.1"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.0",

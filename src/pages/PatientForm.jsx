@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import Header from '../components/Header'
 import Card from '../components/Card'
 import Button from '../components/Button'
+import VoiceInput from '../components/VoiceInput'
 
 export default function PatientForm() {
   const navigate = useNavigate()
@@ -34,6 +35,10 @@ export default function PatientForm() {
         advice: 'Rest, drink fluids, monitor symptoms closely.' 
       } 
     })
+  }
+
+  const handleVoiceTranscription = (transcription) => {
+    setForm({ ...form, symptoms: transcription })
   }
 
   return (
@@ -119,10 +124,15 @@ export default function PatientForm() {
                   name="symptoms" 
                   value={form.symptoms} 
                   onChange={handleChange} 
-                  placeholder="Describe symptoms..."
+                  placeholder="Describe symptoms or use voice input below..."
                   className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-colors duration-300" 
                   rows="4" 
                 />
+                
+                {/* Voice Input Component */}
+                <div className="mt-4 p-4 border border-gray-200 dark:border-gray-700 rounded-lg bg-gray-50 dark:bg-gray-800">
+                  <VoiceInput onTranscription={handleVoiceTranscription} />
+                </div>
               </div>
               
               <div>
